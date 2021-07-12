@@ -6,6 +6,41 @@
     <description>Recent content on Chris McGoran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://whenthetidegoesout.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://whenthetidegoesout.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Blog 002</title>
+      <link>https://whenthetidegoesout.github.io/posts/sql/sql-002/</link>
+      <pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://whenthetidegoesout.github.io/posts/sql/sql-002/</guid>
+      <description>Order of Operation Before we get started on using SQL for Business Analytics we need to understand how SQL works.
+You will notice there are different versions of SQL out there and each of these work slightly differently. We won&amp;rsquo;t be going into the differences. We are using MySQL for this blog. MySQL is an Open Source version of SQL that is supported by Oracle.
+If you search for SQL in wikipedia (https://en.</description>
+    </item>
+    
+    <item>
+      <title>SQL Blog 001</title>
+      <link>https://whenthetidegoesout.github.io/posts/sql/sql-001/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://whenthetidegoesout.github.io/posts/sql/sql-001/</guid>
+      <description>SQL - First the Why Why would you want to get to know and use SQL.
+The Background Well Structured Query Language or SQL is the way we get data from relational databases.
+There is a lot in that statement but lets break it down. Relational databases first came on the scene in the 1970&amp;rsquo;s when Edgar F. Codd when working for IBM led the development of System R, whic hwas the database software.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://whenthetidegoesout.github.io/about/</link>
+      <pubDate>Sat, 01 May 2021 17:11:43 +0100</pubDate>
+      
+      <guid>https://whenthetidegoesout.github.io/about/</guid>
+      <description>So what can you expect from this site. This site is about data, specifically learning how to do cool stuff with data, seeing how easy or difficult it is and how to use it to better understand the world.
+The main areas I will be learing and sharing are
+ Data Analytics, Data Visualization, and Macnhine Learning.  The tools I will be learning with are
+ Python, Tabelau, and SQL.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,96 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Chris McGoran</title>
+		<link>https://whenthetidegoesout.github.io/posts/</link>
+		<description>Recent content in Posts on Chris McGoran</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0000</lastBuildDate>
+		<atom:link href="https://whenthetidegoesout.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>SQL Blog 002</title>
+			<link>https://whenthetidegoesout.github.io/posts/sql/sql-002/</link>
+			<pubDate>Mon, 07 Jun 2021 00:00:00 +0000</pubDate>
+			
+			<guid>https://whenthetidegoesout.github.io/posts/sql/sql-002/</guid>
+			<description>Order of Operation Before we get started on using SQL for Business Analytics we need to understand how SQL works.
+You will notice there are different versions of SQL out there and each of these work slightly differently. We won&amp;rsquo;t be going into the differences. We are using MySQL for this blog. MySQL is an Open Source version of SQL that is supported by Oracle.
+If you search for SQL in wikipedia (https://en.</description>
+			<content type="html"><![CDATA[<h2 id="order-of-operation">Order of Operation</h2>
+<p>Before we get started on using SQL for Business Analytics we need to understand how SQL works.</p>
+<p>You will notice there are different versions of SQL out there and each of these work slightly differently. We won&rsquo;t be going into the differences. We are using MySQL for this blog. MySQL is an Open Source version of SQL that is supported by Oracle.</p>
+<p>If you search for SQL in wikipedia (<a href="https://en.wikipedia.org/wiki/SQL_syntax">https://en.wikipedia.org/wiki/SQL_syntax</a>) it suggests that the languange is subdvided into language elements. These are:</p>
+<ol>
+<li><strong>Keywords</strong> These include items such as <code>SELECT</code> or <code>FROM</code>. They can either be reserved (like <code>SELECT</code>) or non-reserved (<code>ASC</code>)</li>
+<li><strong>Identifiers</strong> These are database objects, like the database name or a table name. If the name is also a <strong>keyword</strong> then the user will have to enter the word in quote marks. For example, YEAR could be a column name, but as it is a <strong>keyword</strong> when using it it shoul be used as <code>&quot;YEAR&quot;</code>.</li>
+<li><strong>Clauses</strong> Are constituent parts of statements and queries</li>
+<li><strong>Expressions</strong> Produce scalar values or tables of data.</li>
+<li><strong>Queries</strong> Retrieve data based on specific criteria from a database. An important elemtn of SQL.</li>
+<li><strong>Statements</strong> May have a persistent effect on schemata and data, or may control transactions, program flow, connections, sessions, or diagnostics. Statements terminate with a semicolon (<code>;</code>). Not requried on every platform, but is a standard part of the grammar.</li>
+</ol>
+<h2 id="order-of-execution">Order of Execution</h2>
+<p>To understand how SQL works, it is important to understand the oder the of operations. This will help with both designing the statemetns and debugging statemetns.</p>
+<p>If we take an example.</p>
+<pre><code>SELECT field_name_1 field_name_2
+FROM table_1
+WHERE field_name_1 = value_1
+GROUP BY field_name_1
+HAVING condition
+ORDER BY field_name_1
+LIMIT 5;
+</code></pre><ol>
+<li>From is the first statement executed. We need to know where to begin. Generally this is a table, so first we take a table.</li>
+<li>Where is the second statement conpleted, with it we filter the table we have just identified.</li>
+<li>Group by, is the next, the third statement. This aggregates the base data.</li>
+<li>Having, is the fourth statement completed. It is only used to filter the aggregated data - only used with the Group By.</li>
+<li>Select, the fifth statement completed. It selects the fields to be presented.</li>
+<li>Order By, the sixth statement - sorts the final fields selected.</li>
+<li>Limit, the seventh and last statement - this limits the number of records returned.</li>
+</ol>
+<p>In the next few blog posts I will go through common &ldquo;how to&rsquo;s&rdquo; Such as your first query, aggregation and dates among others.</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>SQL Blog 001</title>
+			<link>https://whenthetidegoesout.github.io/posts/sql/sql-001/</link>
+			<pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+			
+			<guid>https://whenthetidegoesout.github.io/posts/sql/sql-001/</guid>
+			<description>SQL - First the Why Why would you want to get to know and use SQL.
+The Background Well Structured Query Language or SQL is the way we get data from relational databases.
+There is a lot in that statement but lets break it down. Relational databases first came on the scene in the 1970&amp;rsquo;s when Edgar F. Codd when working for IBM led the development of System R, whic hwas the database software.</description>
+			<content type="html"><![CDATA[<h2 id="sql---first-the-why">SQL - First the Why</h2>
+<p>Why would you want to get to know and use SQL.</p>
+<h3 id="the-background">The Background</h3>
+<p>Well Structured Query Language or SQL is the way we get data from relational databases.</p>
+<p>There is a lot in that statement but lets break it down. Relational databases first came on the scene in the 1970&rsquo;s when Edgar F. Codd when working for IBM led the development of System R, whic hwas the database software. To manage the data in Systeam R SEQUEL, later just called SQL although this too can be pronounded SEQUEL, was invented.</p>
+<p>In 1979 a company called Relational Software created a related product called Oracle V2 after seeing the potential of System R, this was successful and is the begginnings of what we ave today.</p>
+<p>We are not going to get into Normal form and what he described, but suffice to say he designed away of efficiently and accurately storing data and also, importantly for us, retrieveing the data.</p>
+<p>This led to Relational Databases which are collections of related data joined through primary keys and foreign keys. These goups of tables are managed by databases management systems or DBMS. to get to the data and maniputlate the data we use SQL or Structured Query Language.</p>
+<h3 id="sql-getting-started">SQL Getting Started</h3>
+<p>To get started we need to install SQL Server and some sort of client to work with the server. I am using a desktop computer ( a mid 2012 MacBook Air )</p>
+<ol>
+<li>
+<p>Install the server from here -&gt; <a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a>
+Paying close attention to the version of the operating system you are running. Note I am using the community edition and due to the age of my laptop I am using version 8.0.22</p>
+</li>
+<li>
+<p>Next install the client to work with the server. I am going to use MySQL Work Bench given that I am using MySQL Server. The download can be found here -&gt; <a href="https://dev.mysql.com/doc/workbench/en/wb-installing-mac.html">https://dev.mysql.com/doc/workbench/en/wb-installing-mac.html</a></p>
+</li>
+<li>
+<p>Now that we have the server and the client we need some data&hellip; there a couple of options. The one that i have gone with is a test.db from datacharmer here is a link to the github repository. <a href="https://github.com/datacharmer/test_db">https://github.com/datacharmer/test_db</a>. To set up my database I clicked on the &lsquo;Code&rsquo; dropdowna and clicked on the download zip file.</p>
+</li>
+</ol>
+<p>Once downloaded I extraced the zip to the folder that I wanted to work in. I have an &lsquo;SQL&rsquo; folder in my documents.</p>
+<p>I then  opened Terminal navigated to the SQL folder and ran the <code>employees.sql</code> using the <code>mysql &lt; employees_partitioned.sql</code>.</p>
+<p>Once that is complete you can go into MySQL Workbench.</p>
+<p>Click on the plus sign beside the title &lsquo;MySQL Connections&rsquo;.  Fill out the details and locate the &lsquo;dump&rsquo; files and connect. Hey presto we have a databse.</p>
+<p>In the next couple of blogs we will go through how to use SQL for business analytics and business intelligence.  As I result I will not be doing any <code>create</code>, <code>update</code> and <code>drop</code> etc. I will be focusing on using <code>select</code> as the basis of the queries, this is because this is what I primarily use. This is what we need to use SQL for business analytics.</p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>
